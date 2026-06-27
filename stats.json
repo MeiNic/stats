@@ -1,0 +1,485 @@
+{
+  "repositories": [
+    {
+      "name": "MeiNic/MenschAergereDichNicht",
+      "stars": 4,
+      "forks": 1,
+      "languages": [
+        {
+          "name": "Java",
+          "size": 158201,
+          "color": "#b07219"
+        },
+        {
+          "name": "Nix",
+          "size": 872,
+          "color": "#7e7eff"
+        }
+      ],
+      "lines_changed": 0,
+      "views": 23,
+      "private": false
+    },
+    {
+      "name": "Adler-Ente/lerndokumente",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Markdown",
+          "size": 1788893,
+          "color": "#083fa1"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "size": 465047,
+          "color": "#DA5B0B"
+        },
+        {
+          "name": "HTML",
+          "size": 53730,
+          "color": "#e34c26"
+        },
+        {
+          "name": "Python",
+          "size": 40581,
+          "color": "#3572A5"
+        },
+        {
+          "name": "TeX",
+          "size": 37212,
+          "color": "#3D6117"
+        },
+        {
+          "name": "JavaScript",
+          "size": 16611,
+          "color": "#f1e05a"
+        },
+        {
+          "name": "CSS",
+          "size": 13923,
+          "color": "#663399"
+        },
+        {
+          "name": "PHP",
+          "size": 11131,
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Java",
+          "size": 8050,
+          "color": "#b07219"
+        },
+        {
+          "name": "Shell",
+          "size": 304,
+          "color": "#89e051"
+        }
+      ],
+      "lines_changed": 61797,
+      "views": 6,
+      "private": true
+    },
+    {
+      "name": "Adler-Ente/fullstack_minesweeper",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "size": 310403,
+          "color": "#3178c6"
+        },
+        {
+          "name": "Rust",
+          "size": 176597,
+          "color": "#dea584"
+        },
+        {
+          "name": "CSS",
+          "size": 91180,
+          "color": "#663399"
+        },
+        {
+          "name": "HTML",
+          "size": 89411,
+          "color": "#e34c26"
+        },
+        {
+          "name": "FreeMarker",
+          "size": 17796,
+          "color": "#0050b2"
+        },
+        {
+          "name": "Bru",
+          "size": 10740,
+          "color": "#F4AA41"
+        },
+        {
+          "name": "Python",
+          "size": 9223,
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "size": 5073,
+          "color": "#89e051"
+        },
+        {
+          "name": "Dockerfile",
+          "size": 4230,
+          "color": "#384d54"
+        },
+        {
+          "name": "JavaScript",
+          "size": 3076,
+          "color": "#f1e05a"
+        }
+      ],
+      "lines_changed": 161363,
+      "views": 3,
+      "private": true
+    },
+    {
+      "name": "JDAV-Bayern/fahrtkostenabrechnung",
+      "stars": 8,
+      "forks": 2,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "size": 602058,
+          "color": "#3178c6"
+        },
+        {
+          "name": "HTML",
+          "size": 103810,
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "size": 20217,
+          "color": "#663399"
+        },
+        {
+          "name": "SCSS",
+          "size": 10773,
+          "color": "#c6538c"
+        },
+        {
+          "name": "JavaScript",
+          "size": 1270,
+          "color": "#f1e05a"
+        },
+        {
+          "name": "Dockerfile",
+          "size": 406,
+          "color": "#384d54"
+        }
+      ],
+      "lines_changed": 0,
+      "views": 0,
+      "private": false
+    },
+    {
+      "name": "Jonnick92/Monopoly_Holdings",
+      "stars": 3,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "HTML",
+          "size": 140976,
+          "color": "#e34c26"
+        },
+        {
+          "name": "TypeScript",
+          "size": 12446,
+          "color": "#3178c6"
+        }
+      ],
+      "lines_changed": 6,
+      "views": 0,
+      "private": false
+    },
+    {
+      "name": "Adler-Ente/web-speedy-gonzales",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "HTML",
+          "size": 96126,
+          "color": "#e34c26"
+        },
+        {
+          "name": "CSS",
+          "size": 24452,
+          "color": "#663399"
+        },
+        {
+          "name": "JavaScript",
+          "size": 19128,
+          "color": "#f1e05a"
+        },
+        {
+          "name": "PHP",
+          "size": 11270,
+          "color": "#4F5D95"
+        },
+        {
+          "name": "Dockerfile",
+          "size": 791,
+          "color": "#384d54"
+        }
+      ],
+      "lines_changed": 10453,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/ema_monopoly_holdings",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Dart",
+          "size": 604144,
+          "color": "#00B4AB"
+        },
+        {
+          "name": "C++",
+          "size": 25407,
+          "color": "#f34b7d"
+        },
+        {
+          "name": "CMake",
+          "size": 20336,
+          "color": "#DA3434"
+        },
+        {
+          "name": "Swift",
+          "size": 2198,
+          "color": "#F05138"
+        },
+        {
+          "name": "C",
+          "size": 1425,
+          "color": "#555555"
+        },
+        {
+          "name": "HTML",
+          "size": 1254,
+          "color": "#e34c26"
+        },
+        {
+          "name": "Kotlin",
+          "size": 147,
+          "color": "#A97BFF"
+        },
+        {
+          "name": "Objective-C",
+          "size": 38,
+          "color": "#438eff"
+        }
+      ],
+      "lines_changed": 73393,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/nixos-config",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Nix",
+          "size": 51298,
+          "color": "#7e7eff"
+        },
+        {
+          "name": "Python",
+          "size": 5115,
+          "color": "#3572A5"
+        }
+      ],
+      "lines_changed": 3486,
+      "views": 0,
+      "private": false
+    },
+    {
+      "name": "MeiNic/github-stats-anhanced",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Zig",
+          "size": 61529,
+          "color": "#ec915c"
+        }
+      ],
+      "lines_changed": 0,
+      "views": 0,
+      "private": false
+    },
+    {
+      "name": "MeiNic/MeiNic",
+      "stars": 0,
+      "forks": 0,
+      "languages": [],
+      "lines_changed": 36,
+      "views": 0,
+      "private": false
+    },
+    {
+      "name": "MeiNic/C-Studium",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "C++",
+          "size": 38860,
+          "color": "#f34b7d"
+        },
+        {
+          "name": "CMake",
+          "size": 1718,
+          "color": "#DA3434"
+        },
+        {
+          "name": "C",
+          "size": 89,
+          "color": "#555555"
+        }
+      ],
+      "lines_changed": 12633,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "Adler-Ente/Cloud-Computing-Projekte",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Python",
+          "size": 36321,
+          "color": "#3572A5"
+        },
+        {
+          "name": "Shell",
+          "size": 7691,
+          "color": "#89e051"
+        },
+        {
+          "name": "Dockerfile",
+          "size": 332,
+          "color": "#384d54"
+        }
+      ],
+      "lines_changed": 4214,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "TastingComb/BrickBreaker",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Java",
+          "size": 11952,
+          "color": "#b07219"
+        }
+      ],
+      "lines_changed": 2,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/Advent-of-Code",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "PHP",
+          "size": 16467,
+          "color": "#4F5D95"
+        }
+      ],
+      "lines_changed": 5188,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/ProgC",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "C",
+          "size": 19585,
+          "color": "#555555"
+        }
+      ],
+      "lines_changed": 812,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/javaKarol",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Java",
+          "size": 8649,
+          "color": "#b07219"
+        }
+      ],
+      "lines_changed": 361,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/Code_of_Advent_23",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "PHP",
+          "size": 6242,
+          "color": "#4F5D95"
+        }
+      ],
+      "lines_changed": 2039,
+      "views": 0,
+      "private": true
+    },
+    {
+      "name": "MeiNic/Inf12-1",
+      "stars": 0,
+      "forks": 0,
+      "languages": [
+        {
+          "name": "Java",
+          "size": 3075,
+          "color": "#b07219"
+        }
+      ],
+      "lines_changed": 211,
+      "views": 0,
+      "private": true
+    }
+  ],
+  "user": "MeiNic",
+  "name": "MeiNic",
+  "emails": [
+    "nico.meissner2006@gmail.com",
+    "137501539+MeiNic@users.noreply.github.com",
+    "inf4460@hs-worms.de"
+  ],
+  "repo_contributions": 15,
+  "issue_contributions": 91,
+  "commit_contributions": 1331,
+  "pr_contributions": 150,
+  "review_contributions": 76
+}
