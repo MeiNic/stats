@@ -117,13 +117,16 @@ pub fn init(
     allocator: std.mem.Allocator,
     io: std.Io,
     max_retries: ?usize,
+    count_coauthored: bool,
+    include_noreply_email: bool,
 ) !Statistics {
     var arena = std.heap.ArenaAllocator.init(allocator);
     defer arena.deinit();
 
-    var self: Statistics = try getRepos(allocator, &arena, client);
+    var self: Statistics =
+        try getRepos(allocator, &arena, client, include_noreply_email);
     errdefer self.deinit(allocator);
-    try self.getLinesChanged(&arena, io, client, max_retries);
+    try self.getLinesChanged(&arena, io, client, max_retries, count_coauthored);
     return self;
 }
 
@@ -153,7 +156,11 @@ pub fn deinit(self: Statistics, allocator: std.mem.Allocator) void {
     allocator.free(self.emails);
 }
 
-fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
+fn getBasicInfo(
+    client: *HttpClient,
+    arena: *std.heap.ArenaAllocator,
+    include_noreply_email: bool,
+) !struct {
     years: []u32,
     user: []const u8,
     name: ?[]const u8,
@@ -164,6 +171,7 @@ fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
         \\query {
         \\  viewer {
         \\    login
+        \\    databaseId
         \\    name
         \\    contributionsCollection {
         \\      contributionYears
@@ -182,6 +190,7 @@ fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
     const parsed = (try std.json.parseFromSliceLeaky(
         struct { data: struct { viewer: struct {
             login: []const u8,
+            databaseId: i64,
             name: ?[]const u8,
             contributionsCollection: struct {
                 contributionYears: []u32,
@@ -221,6 +230,20 @@ fn getBasicInfo(client: *HttpClient, arena: *std.heap.ArenaAllocator) !struct {
             "{s}@users.noreply.github.com",
             .{parsed.login},
         );
+    }
+    // GitHub's `/user/emails` never returns the `<id>+<login>` privacy
+    // address, so commits authored under it (e.g. web merges made with
+    // "Keep my email address private" enabled) are missed unless we add it.
+    if (include_noreply_email) {
+        const with_noreply =
+            try arena.allocator().alloc([]const u8, emails.len + 1);
+        @memcpy(with_noreply[0..emails.len], emails);
+        with_noreply[emails.len] = try std.fmt.allocPrint(
+            arena.allocator(),
+            "{d}+{s}@users.noreply.github.com",
+            .{ parsed.databaseId, parsed.login },
+        );
+        emails = with_noreply;
     }
 
     return .{
@@ -475,6 +498,7 @@ fn getRepos(
     allocator: std.mem.Allocator,
     arena: *std.heap.ArenaAllocator,
     client: *HttpClient,
+    include_noreply_email: bool,
 ) !Statistics {
     var result: Statistics = .{
         .user = undefined,
@@ -493,7 +517,7 @@ fn getRepos(
     var seen: std.StringHashMap(bool) = .init(arena.allocator());
     defer seen.deinit();
 
-    const info = try getBasicInfo(client, arena);
+    const info = try getBasicInfo(client, arena, include_noreply_email);
     if (info.name) |n| {
         std.log.info("Getting data for {s} ({s})...", .{ n, info.user });
     } else {
@@ -558,6 +582,7 @@ fn getLinesChanged(
     io: std.Io,
     client: *HttpClient,
     max_retries: ?usize,
+    count_coauthored: bool,
 ) !void {
     const allocator = arena.allocator();
     const T = struct {
@@ -623,6 +648,7 @@ fn getLinesChanged(
                             client.token,
                             item.repo.name,
                             self.emails,
+                            count_coauthored,
                         ) catch |e| switch (e) {
                             error.GitNotInstalled => 0,
                             else => return e,

@@ -60,8 +60,14 @@ The GitHub statistics API returns inaccurate results in some situations:
     - Our computed totals likely under-count relative to GitHub's, since theirs
       correctly attribute authorship for contributions to pull requests with
       several authors that end up squashed and merged by just one author
+      - Pass `--count-coauthored` (or set `COUNT_COAUTHORED`) to also credit
+        commits where you appear in a `Co-authored-by:` trailer, such as
+        squash-merged pull requests authored by someone else
     - They also correctly attribute commits we may miss if they are made with
       old email addresses no longer connected to the account
+      - Pass `--include-noreply-email` (or set `INCLUDE_NOREPLY_EMAIL`) to also
+        count commits made under your `<id>+<login>@users.noreply.github.com`
+        GitHub privacy address, which the email API does not return
 - Repository view count statistics often seem too low, and many referring sites
   are not captured
   - If you lack permissions to access the view count for a repository, it will

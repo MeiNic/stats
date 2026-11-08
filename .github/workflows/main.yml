@@ -45,6 +45,8 @@ jobs:
         EXCLUDE_REPOS: ${{ secrets.EXCLUDE_REPOS }}
         EXCLUDE_LANGS: ${{ secrets.EXCLUDE_LANGS }}
         EXCLUDE_PRIVATE: "false"
+        COUNT_COAUTHORED: ${{ secrets.COUNT_COAUTHORED }}
+        INCLUDE_NOREPLY_EMAIL: ${{ secrets.INCLUDE_NOREPLY_EMAIL }}
         SILENT: "true"
         # TODO: Remove this when they get their API working again
         # https://github.com/orgs/community/discussions/192970
